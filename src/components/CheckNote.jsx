@@ -1,21 +1,12 @@
 import { useState, useEffect } from "react";
+import { useFetch } from "../fetchData";
 import {Notes} from "../Notes"
-import { Remover } from "../styles";
 export default function CheckNote() {
-  const [notes, setNotes] = useState(null);
-  useEffect(() =>{
-      fetch('http://localhost:8000/notes')
-      .then(res => {
-          return res.json()
-      }) 
-      .then(data=>{
-        console.log(data);
-        setNotes(data);
-      })
-  }, [])
+  const {data, isLoading} = useFetch('http://localhost:8000/notes')
   return (
     <div>
-      {notes && <Notes notes={notes} title="Your Problems !!!"/>}      
+      {isLoading &&<div>Loading...</div>}
+      {data && <Notes notes={data} title="Your Problems !!!"/>}      
     </div>
   );
 }
