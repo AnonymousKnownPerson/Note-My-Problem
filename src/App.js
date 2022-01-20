@@ -1,24 +1,23 @@
 import { Outlet, Link } from "react-router-dom";
-import { MainStyle }from "./styles"
-
+import { TextSmall, TextHead } from "./styles";
 export default function App() {
+  const StyleLink = {
+    color:'white',
+  };
   return (
-    <MainStyle>
     <div>
-      <h1>
-      <Link to="/">Note My Problem</Link>
-        </h1>
-      <nav
-        style={{
-          borderBottom: "solid 1px",
-          paddingBottom: "1rem"
-        }}
-      >
-        <Link to="/invoices">Invoices</Link> |{" "}
-        <Link to="/expenses">Expenses</Link>
-      </nav>
-      <Outlet/>
+      <TextHead>
+        <h1>
+          <Link style={StyleLink} to="/">Note My Problem</Link>
+          </h1>
+          </TextHead>
+          <TextSmall>
+        <nav>
+          <Link style={StyleLink} to="/NewNote">NewNote</Link> |{" "}
+          <Link style={StyleLink} to="/CheckNote">CheckNote</Link>
+        </nav>
+        </TextSmall>
+        <Outlet />      
     </div>
-    </MainStyle>
   );
 }
