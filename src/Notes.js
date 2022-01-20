@@ -1,9 +1,8 @@
 import { Element1 } from "./styles";
 import { Link } from "react-router-dom";
 import NewNote from "./components/NewNote";
-export const Notes = ({ notes, title }) => {
-
-    
+import { Remover } from "./styles";
+export const Notes = ({ notes, title }) => {   
     
   return (
     <div className="notes">

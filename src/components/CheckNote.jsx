@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import {Notes} from "../Notes"
+import { Remover } from "../styles";
 export default function CheckNote() {
   const [notes, setNotes] = useState(null);
   useEffect(() =>{
