@@ -15,9 +15,9 @@ render(
       <Routes>
         <Route path="/" element={<App />}>
           <Route path="NewNote" element={<NewNote />} />
-          <Route path="EditNote" element={<EditNote />} />
           <Route path="CheckNote" element={<CheckNote />} />
           <Route path="CheckNote/:id" element={<Note />} />
+          <Route path="EditNote/:id" element={<EditNote />} />
           <Route
             path="*"
             element={
