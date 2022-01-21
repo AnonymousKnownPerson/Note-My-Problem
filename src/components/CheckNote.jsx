@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { useFetch } from "../fetchData";
 import {Notes} from "../Notes"
 export default function CheckNote() {
