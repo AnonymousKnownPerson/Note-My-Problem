@@ -1,29 +1,28 @@
 import { Element2, NewNoteStyle } from "../styles";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useFetch } from "../fetchData";
 import { useParams } from "react-router-dom";
 export default function EditNote() {
   const { id } = useParams();
-  const { data, isLoading } = useFetch("http://localhost:8000/notes/" + id.value).then(console.log(data));
-  const [title, setTitle] = useState(data.title);
-  const [date, setDate] = useState(data.date);
-  const [typeOfNoteId, setTypeOfNoteId] = useState(data.typeOfNoteId);
-  const [test, setTest] = useState(data.test);
+  const [title, setTitle] = useState('');
+  const [date, setDate] = useState('');
+  const [typeOfNoteId, setTypeOfNoteId] = useState('1');
+  const [test, setTest] = useState('');
   const navigate = useNavigate();
 
   const whenSubmit = (e) => {
     e.preventDefault();
     const note = { id, title, date, typeOfNoteId, test };
-    fetch("http://localhost:8000/notes/", {
+    console.log(note)
+    fetch("http://localhost:8000/notes/"+ id, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(note),
     }).then(navigate("/"));
   };
-  return (
+  return (    
     <Element2>
-      <NewNoteStyle>
+      <NewNoteStyle>      
         <div className="create">
           <h2>Let's edit that Problem!!!</h2>
           <form onSubmit={whenSubmit}>

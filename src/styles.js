@@ -82,6 +82,37 @@ export const Element2 = styled.div`
     opacity: 1;
   }
 `;
+export const Element3 = styled.article`
+  align-content: center;
+  align-self: center;
+  a:link {
+    color: black;
+    text-decoration: none;
+  }
+  h2:link {
+    color: black;
+    text-decoration: none;
+  }
+  h2:visited {
+    color: black;
+    text-decoration: none;
+  }
+  a:visited {
+    color: black;
+    text-decoration: none;
+  }
+  margin: 30px;
+  background-color: white;
+  border-radius: 6px 20px 6px 20px;
+  backdrop-filter: blur(2rem);
+  display: grid;
+  opacity: 1;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+  padding: 30;
+  &:hover {
+    opacity: 1;
+  }
+`;
 export const TextSmall = styled.text`
   color: #000;
   text-decoration: none;
@@ -180,5 +211,8 @@ export const NewNoteStyle = styled.div`
     padding: 8px;
     border-radius: 8px;
     cursor: pointer;
+  }
+  button:hover{
+    text-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
   }
 `;
