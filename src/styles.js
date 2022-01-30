@@ -179,11 +179,6 @@ justify-content: center;
   display: flex;
 
 `;
-export const bodyToColor = styled.body`
-background-color: white;
-background: white;
-
-`
 export const TextHead = styled.text`
   color: #000;
   text-decoration: none;
@@ -228,6 +223,7 @@ button {
   }
   button:hover{
     text-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+    color:#4d320e;
   }
 }
 `;
@@ -270,3 +266,19 @@ export const NewNoteStyle = styled.div`
     text-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
   }
 `;
+export const NoteText = styled.div`
+width: 500px;
+  min-height: 200px;
+  text-align: center;
+  margin: 20px auto;
+  background-color: white;
+  border-radius: 6px 20px 6px 20px;
+  backdrop-filter: blur(2rem);  
+  display: grid;
+  opacity: 0.9;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+  padding: 30;
+  font-weight:lighter;
+`
+export const NoteText2 = styled.div`
+margin:20px`

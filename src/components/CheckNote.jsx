@@ -3,7 +3,6 @@ import { useFetch } from "../fetchData";
 import { Notes } from "../Notes";
 import { sortThis } from "../sortThis";
 import { SortAndFilter, SortButton } from "../styles";
-import { bodyToColor } from "../styles";
 export default function CheckNote() {
   const [sort, setSort] = useState("_sort=id");
   const [sortOrder, setSortOrder] = useState("_order=asc");
