@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useFetch } from "../fetchData";
 import { Notes } from "../Notes";
 import { sortThis } from "../sortThis";
+import { SortAndFilter, SortButton } from "../styles";
+import { bodyToColor } from "../styles";
 export default function CheckNote() {
   const [sort, setSort] = useState("_sort=id");
   const [sortOrder, setSortOrder] = useState("_order=asc");
@@ -25,6 +27,7 @@ export default function CheckNote() {
 
   return (
     <div>
+      <SortButton>
       <button onClick={SortThis}>
         {sortOrder === "_order=asc" ? (
           <div>Sort By Order Desc</div>
@@ -32,26 +35,31 @@ export default function CheckNote() {
           <div>Sort By Order Asc</div>
         )}
       </button>
-      <label>Sort By:</label>
-      <select value={sort} onChange={(e) => setSort(e.target.value)}>
-        <option value="_sort=id">Id</option>
-        <option value="_sort=title">Title</option>
-        <option value="_sort=date">Date</option>
-      </select>
-      <label>Filter Problems - Title:</label>
-      <input
-        type="text"
-        required
-        value={filterTitle}
-        onChange={(e) => setFilterTitle(e.target.value)}
-      />
-      <label>Filter Problems - Date:</label>
-      <input
-        type="date"
-        required
-        value={filterDate}
-        onChange={(e) => setFilterDate(e.target.value)}
-      />
+      </SortButton>
+      <SortAndFilter>
+      <nav >
+        <label>Sort By:</label>
+        <select value={sort} onChange={(e) => setSort(e.target.value)}>
+          <option value="_sort=id">Id</option>
+          <option value="_sort=title">Title</option>
+          <option value="_sort=date">Date</option>
+        </select>
+        <label>          Filter Problems - Title:</label>
+        <input
+          type="text"
+          required
+          value={filterTitle}
+          onChange={(e) => setFilterTitle(e.target.value)}
+        />
+        <label>          Filter Problems - Date:</label>
+        <input
+          type="date"
+          required
+          value={filterDate}
+          onChange={(e) => setFilterDate(e.target.value)}
+        />
+      </nav>
+      </SortAndFilter>
       {isLoading && <div>Loading...</div>}
       {data && <Notes notes={data} title="Your Problems !!!" />}
     </div>

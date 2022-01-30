@@ -16,8 +16,8 @@ export default function Note() {
             {isLoading && <div>Loading...</div>}
             {data&&(
                 <article>
-                    <h2>{data.title}</h2>
-                    <p>{data.date}</p>
+                    <h2>Title: {data.title}</h2>
+                    <p>Date: {data.date}</p>
                     <div>{data.test}</div>
                     <Link to={`/EditNote/${data.id}`}>
                     <button>Edit</button>

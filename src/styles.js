@@ -113,6 +113,24 @@ export const Element3 = styled.article`
     opacity: 1;
   }
 `;
+export const SortButton = styled.button`
+margin-top: 10px;
+button {
+    background: #ffc880;
+    color: #fff;
+    border: 0;
+    padding: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  button:hover{
+    text-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+    color:#4d320e;
+
+  }
+  font-weight:bolder;
+
+`
 export const TextSmall = styled.text`
   color: #000;
   text-decoration: none;
@@ -142,6 +160,30 @@ export const TextSmall = styled.text`
     text-decoration: none;
   }
 `;
+export const SortAndFilter = styled.nav`
+background-color: #ffe4c1;
+background:#ffe4c1;
+font-weight:lighter;
+
+text-decoration: none;
+border-width: 1px;
+border-left: none;
+border-right: none;
+border-color: black;
+margin-top: 15px;
+margin-bottom: 15px;
+justify-content:space-between;
+min-height: 50px;
+justify-content: center;
+  align-items: center;
+  display: flex;
+
+`;
+export const bodyToColor = styled.body`
+background-color: white;
+background: white;
+
+`
 export const TextHead = styled.text`
   color: #000;
   text-decoration: none;
@@ -176,6 +218,17 @@ body{
   background: rgb(235,235,235);
 background: linear-gradient(171deg, rgba(235,235,235,1) 7%, rgba(255,166,48,1) 100%);
 color: #111; font-family: 'Helvetica Neue', sans-serif; font-size: 14x; font-weight: bold; letter-spacing: -1px; line-height: 1;
+button {
+    background: #ffc880;
+    color: #fff;
+    border: 0;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  button:hover{
+    text-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+  }
 }
 `;
 export const NewNoteStyle = styled.div`
@@ -202,8 +255,9 @@ export const NewNoteStyle = styled.div`
     display: block;
     resize: none;
   }
-  textarea{
-    height:200px;}
+  textarea {
+    height: 200px;
+  }
   button {
     background: #ffa630;
     color: #fff;
@@ -212,7 +266,7 @@ export const NewNoteStyle = styled.div`
     border-radius: 8px;
     cursor: pointer;
   }
-  button:hover{
+  button:hover {
     text-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
   }
 `;

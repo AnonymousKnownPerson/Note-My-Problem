@@ -1,35 +1,21 @@
 {
   "notes": [
     {
-      "id": 1,
-      "title": "test",
-      "date": "2022-01-20",
+      "title": "New ToDoList",
+      "date": "2022-01-06",
       "typeOfNoteId": "3",
-      "test": "2ewewwewe"
+      "test": "Im writing there some random text to test this thing",
+      "id": 6
     },
     {
-      "id": 2,
-      "title": "Co zrobić z ZTP",
-      "date": "18-01-2022",
+      "title": "Random Title",
+      "date": "2022-01-12",
       "typeOfNoteId": "2",
-      "test": "Poda wał tuż moki dwie wnet balu. Krzyknął bór Syna książką Byle Wiem dwie szal taż dworzanów Bogu. Kara jego twą cary sali. Góry najpiękniejszéj Spór Rzeczypospolitéj licem chcą Najpiękniejszego. Owad puer twą Jaki przeznaczenie Wyprowadzają kara poprzysiągł Dąbrowskiego sami cary. Skoszonéj toczy szczodroty niezostał wódz marszczył zasie innym. Przy myśliwstwem chce komu Nikt przyglądał angielskiego. "
-    },
-    {
-      "id": 4,
-      "title": "Pamiętnik nr 1",
-      "date": "16-01-2022",
-      "typeOfNoteId": "1",
-      "test": "Poda wał tuż moki dwie wnet balu. Krzyknął bór Syna książką Byle Wiem dwie szal taż dworzanów Bogu. Kara jego twą cary sali. Góry najpiękniejszéj Spór Rzeczypospolitéj licem chcą Najpiękniejszego. Owad puer twą Jaki przeznaczenie Wyprowadzają kara poprzysiągł Dąbrowskiego sami cary. Skoszonéj toczy szczodroty niezostał wódz marszczył zasie innym. Przy myśliwstwem chce komu Nikt przyglądał angielskiego. "
-    },
-    {
-      "id": 5,
-      "title": "PZ Planowanie",
-      "date": "19-01-2022",
-      "typeOfNoteId": "3",
-      "test": "Poda wał tuż moki dwie wnet balu. Krzyknął bór Syna książką Byle Wiem dwie szal taż dworzanów Bogu. Kara jego twą cary sali. Góry najpiękniejszéj Spór Rzeczypospolitéj licem chcą Najpiękniejszego. Owad puer twą Jaki przeznaczenie Wyprowadzają kara poprzysiągł Dąbrowskiego sami cary. Skoszonéj toczy szczodroty niezostał wódz marszczył zasie innym. Przy myśliwstwem chce komu Nikt przyglądał angielskiego. "
+      "test": "Random Textdsadsads",
+      "id": 7
     }
   ],
-  "typeOfNoteId": [
+  "typeId": [
     {
       "id": 1,
       "body": "diary"
@@ -41,6 +27,28 @@
     {
       "id": 3,
       "body": "todolist"
+    }
+  ],
+  "connestedTables": [
+    {
+      "idOfNotes": 1,
+      "idOfType": [
+        "1",
+        "2"
+      ]
+    },
+    {
+      "idOfNotes": 2,
+      "idOfType": [
+        "2",
+        "3"
+      ]
+    },
+    {
+      "idOfNotes": 3,
+      "idOfType": [
+        "2"
+      ]
     }
   ]
 }
