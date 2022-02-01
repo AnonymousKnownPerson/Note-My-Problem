@@ -4,10 +4,10 @@ import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 export default function EditNote() {
   const { id } = useParams();
-  const [title, setTitle] = useState('');
-  const [date, setDate] = useState('');
-  const [typeOfNoteId, setTypeOfNoteId] = useState('1');
-  const [test, setTest] = useState('');
+  const [title, setTitle] = useState(window.localStorage.getItem("title"));
+  const [date, setDate] = useState(window.localStorage.getItem("date"));
+  const [typeOfNoteId, setTypeOfNoteId] = useState(window.localStorage.getItem("typeOfNoteId"));
+  const [test, setTest] = useState(window.localStorage.getItem("test"));
   const navigate = useNavigate();
 
   const whenSubmit = (e) => {
